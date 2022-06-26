@@ -1,0 +1,33 @@
+[2022-06-26 09:19:58,401: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-26 09:19:58,401: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-26 09:19:58,407: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-26 09:19:58,410: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-26 09:19:58,410: ERROR: stage_01_prepare_data]: 'source_data'
+Traceback (most recent call last):
+  File ".\src\stage_01_prepare_data.py", line 61, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File ".\src\stage_01_prepare_data.py", line 26, in main
+    source_data_dir = config["source_data"]["data_dir"]
+KeyError: 'source_data'
+[2022-06-26 09:20:40,416: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-26 09:20:40,416: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-26 09:20:40,419: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-26 09:20:40,421: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-26 09:20:40,421: INFO: common]: created directory at: artifacts\prepared
+[2022-06-26 09:20:40,421: ERROR: stage_01_prepare_data]: [Errno 2] No such file or directory: 'data\\data.xml'
+Traceback (most recent call last):
+  File ".\src\stage_01_prepare_data.py", line 61, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File ".\src\stage_01_prepare_data.py", line 45, in main
+    with open(source_data_path,encoding= encode) as fd_in:      #reading actual input data
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\data.xml'
+[2022-06-26 09:21:19,989: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-26 09:21:19,989: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-26 09:21:19,992: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-26 09:21:19,994: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-26 09:21:19,994: INFO: common]: created directory at: artifacts\prepared
+[2022-06-26 09:21:22,562: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
